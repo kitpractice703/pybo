@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
 from pathlib import Path
+from os import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
@@ -125,6 +126,10 @@ STATICFILES_DIRS = [
 LOGIN_REDIRECT_URL = '/'
 
 # 로깅 설정
+LOG_DIR = BASE_DIR / 'logs'
+if not os.path.exists(LOG_DIR):
+  os.makedirs(LOG_DIR)
+
 LOGGING = {
   'version': 1,
   'disable_existing_loggers': False,
