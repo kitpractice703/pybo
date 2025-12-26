@@ -147,6 +147,10 @@ LOGGING = {
       'format': '[{server_time}] {message}',
       'style': '{',
     },
+    'standard': {
+      'format': '{levelname} {asctime} {module} {message}',
+      'style' : '{',
+    },
   },
   'handlers': {
     'console': {
