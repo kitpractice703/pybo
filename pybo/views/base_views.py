@@ -4,6 +4,7 @@ from django.shortcuts import render, get_object_or_404
 from django.db.models import Q
 
 def index(request):
+  3/0
   page = request.GET.get('page', '1') # 페이지
   kw = request.GET.get('kw', '') # 검색어
   question_list = Question.objects.order_by('-create_date')
